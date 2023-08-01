@@ -1,0 +1,410 @@
+{
+	"info": {
+		"_postman_id": "053828e7-f315-4a6c-bf45-8b908cdfed8d",
+		"name": "DRF Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21677924"
+	},
+	"item": [
+		{
+			"name": "UserApis",
+			"item": [
+				{
+					"name": "GetUser",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg2OTg5NjExLCJpYXQiOjE2ODY5ODg3MTEsImp0aSI6IjM0M2ZkM2Q0OWFhNTQ2MTg4N2E2NDQ5NWY5NjRjNjY0IiwidXNlcl9pZCI6M30.Sk48UFEI3y0sQve0f6WdxiJPgPLjtmpzUB3NIRKLVhM",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg3MDk4NTY5LCJpYXQiOjE2ODcwMTIxNjksImp0aSI6IjYzMjM1M2Q5YWE5YzQ4MjdhZWE4N2Y0ZGNlZTJiYmZkIiwidXNlcl9pZCI6NH0.-rnoR31WbLAemf9E5gtYw-MOPHk2GE6yziVq2PvtvDw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/get_user",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"get_user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Sohan Kumar\",\n    \"email\":\"sohan@drf.com\",\n    \"password\":\"sohan123\",\n    \"username\":\"sohan123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/register_user",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"register_user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"rohan123\",\n    \"password\":\"rohan123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/user_login",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"user_login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ArticleApis",
+			"item": [
+				{
+					"name": "CreateArticles",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg3MDk4NTY5LCJpYXQiOjE2ODcwMTIxNjksImp0aSI6IjYzMjM1M2Q5YWE5YzQ4MjdhZWE4N2Y0ZGNlZTJiYmZkIiwidXNlcl9pZCI6NH0.-rnoR31WbLAemf9E5gtYw-MOPHk2GE6yziVq2PvtvDw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"blog\":1,\n    \"title\":\"Rohan first article\",\n    \"content\":\"Rohan's first article in a blog.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/articles",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateArticle",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg3MDk4NTY5LCJpYXQiOjE2ODcwMTIxNjksImp0aSI6IjYzMjM1M2Q5YWE5YzQ4MjdhZWE4N2Y0ZGNlZTJiYmZkIiwidXNlcl9pZCI6NH0.-rnoR31WbLAemf9E5gtYw-MOPHk2GE6yziVq2PvtvDw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Article 1 in blog 1\",\n    \"content\":\"This is the first updated article in blog 1.\",\n    \"article_id\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/articles",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadArticles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/articles",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteArticle",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg3MDg4NzMzLCJpYXQiOjE2ODcwMDIzMzMsImp0aSI6ImFlZmVhOGI1ZWZmOTRiMWE4NmY4OWRiNTRjMjBjYTIwIiwidXNlcl9pZCI6Mn0.m-dIrVDNnQPUTWRvY93SyaQnKbD85mmwJU8a4BAQ9Io",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"article_id\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/articles",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"articles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BlogApis",
+			"item": [
+				{
+					"name": "CreateBlogs",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg3MDk4NTY5LCJpYXQiOjE2ODcwMTIxNjksImp0aSI6IjYzMjM1M2Q5YWE5YzQ4MjdhZWE4N2Y0ZGNlZTJiYmZkIiwidXNlcl9pZCI6NH0.-rnoR31WbLAemf9E5gtYw-MOPHk2GE6yziVq2PvtvDw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Rohan First Blog\",\n    \"description\":\"This is Rohan's First blog.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/blogs",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"blogs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateBlog",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg3MDk4NTY5LCJpYXQiOjE2ODcwMTIxNjksImp0aSI6IjYzMjM1M2Q5YWE5YzQ4MjdhZWE4N2Y0ZGNlZTJiYmZkIiwidXNlcl9pZCI6NH0.-rnoR31WbLAemf9E5gtYw-MOPHk2GE6yziVq2PvtvDw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Rohan First Blog\",\n    \"description\":\"This is Rohan's first updatedd blog.\",\n    \"blog_id\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/blogs",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"blogs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadBlogs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"blog_id\":7\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/blogs",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"blogs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteBlogs",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg3MDk4NTY5LCJpYXQiOjE2ODcwMTIxNjksImp0aSI6IjYzMjM1M2Q5YWE5YzQ4MjdhZWE4N2Y0ZGNlZTJiYmZkIiwidXNlcl9pZCI6NH0.-rnoR31WbLAemf9E5gtYw-MOPHk2GE6yziVq2PvtvDw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"blog_id\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/blogs",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"blogs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
